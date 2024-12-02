@@ -53,8 +53,7 @@
             {
                 "Metros" => cantidad,
                 "kilometros" => cantidad * 1000,
-                "Millas" => cantidad * 1609.34,
-                _ => throw new ArgumentException("Unidad de origen no válida")
+                "Millas" => cantidad * 1609.34
             };
 
   
@@ -62,8 +61,7 @@
             {
                 "Metros" => cantidadEnMetros,
                 "kilometros" => cantidadEnMetros / 1000,
-                "Millas" => cantidadEnMetros / 1609.34,
-                _ => throw new ArgumentException("Unidad de destino no válida")
+                "Millas" => cantidadEnMetros / 1609.34
             };
         }
     }
