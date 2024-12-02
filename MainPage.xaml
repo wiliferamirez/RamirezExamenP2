@@ -12,6 +12,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <BoxView Color="Black" />
+        <Image Source="\WRExamenP2\Resources\Images\conversor.png"
+               VerticalOptions="Start"/>
         <Label Grid.Row="0"
                Text="WR Evaluacion Proyecto 2P"
                HorizontalOptions="Center"
