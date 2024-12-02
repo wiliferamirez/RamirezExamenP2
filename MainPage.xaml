@@ -37,7 +37,7 @@
 
             <Picker Grid.Row="0" Grid.Column="0"
                     HeightRequest="70"
-                    x:Name="WRaConvertir"
+                    x:Name="WRaConvertirPicker"
                     Title="Selecciona una medida:">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -48,13 +48,14 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Entry Grid.Row="1" Grid.Column="0"
+            <Entry  x:Name="WRcantidadEntry"
+                    Grid.Row="1" Grid.Column="0"
                     Placeholder="ingresa la cantidad"/>
 
             <Picker Grid.Row="0" Grid.Column="1" Margin="20"
                     HeightRequest="70"
-                    x:Name="WRnuevaMedida"
-                    Title="A que unidades deseas convertir::">
+                    x:Name="WRnuevaMedidaPicker"
+                    Title="A que unidades deseas convertir:">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Metros</x:String>
