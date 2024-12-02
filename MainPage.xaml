@@ -3,15 +3,87 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WRExamenP2.MainPage">
 
-    <Grid Margin="20,35,20,20">
-        <Label Text="WR Examen Progreso 2"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <BoxView Color="Black" />
+        <Label Grid.Row="0"
+               Text="WR Evaluacion Proyecto 2P"
+               HorizontalOptions="Center"
+               FontSize="Title"
+               TextColor="White"/>
+        <Label Grid.Row="0"
+               Text="Conversor de unidades"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
-               FontSize="Header"/>
-        <Label Text="WRConversor de Unidades"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand"
-               FontSize="Title"/>
+               FontSize="Title"
+               TextColor="White"/>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
 
+            <Picker Grid.Row="0" Grid.Column="0"
+                    HeightRequest="70"
+                    x:Name="WRaConvertir"
+                    Title="Selecciona una medida:">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Metros</x:String>
+                        <x:String>kilometros</x:String>
+                        <x:String>Millas</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Entry Grid.Row="1" Grid.Column="0"
+                    Placeholder="ingresa la cantidad"/>
+
+            <Picker Grid.Row="0" Grid.Column="1" Margin="20"
+                    HeightRequest="70"
+                    x:Name="WRnuevaMedida"
+                    Title="A que unidades deseas convertir::">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Metros</x:String>
+                        <x:String>kilometros</x:String>
+                        <x:String>Millas</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label  Grid.Row="0" Grid.Column="3"
+                    Text="Resultado:"
+                    FontSize="Medium"/>
+            <Label  x:Name="WRresultadoLabel"
+                    Grid.Row="2" Grid.Column="3"
+                    HorizontalOptions="Center"
+                    Text="0"
+                    FontSize="Large"/>
+
+        </Grid>
+        <Button x:Name="WRConvertirButton"
+                Grid.Row="2" Margin="25"
+                Text="Convertir"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                Clicked="convertirUnidades"/>
+        <Button x:Name="WRLimpiarButton"
+                Grid.Row="2" Margin="25"
+                Text="Limpiar"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="limpiarCampos"/>
     </Grid>
 </ContentPage>
