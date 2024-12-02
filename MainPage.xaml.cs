@@ -8,7 +8,7 @@
         }
 
 
-        private void convertirUnidades(object sender, EventArgs e)
+        private void WRconvertirUnidades(object sender, EventArgs e)
         {
 
                 if (string.IsNullOrWhiteSpace(WRcantidadEntry.Text))
@@ -29,7 +29,7 @@
                 double cantidad = double.Parse(WRcantidadEntry.Text);
 
 
-                double resultado = Convertir(cantidad, unidadOrigen, unidadDestino);
+                double resultado = WRConvertir(cantidad, unidadOrigen, unidadDestino);
 
 
                 WRresultadoLabel.Text = resultado.ToString("F2");
@@ -37,7 +37,7 @@
         }
 
 
-        private void limpiarCampos(object sender, EventArgs e)
+        private void WRlimpiarCampos(object sender, EventArgs e)
         {
             WRcantidadEntry.Text = string.Empty;
             WRaConvertirPicker.SelectedItem = null;
@@ -46,7 +46,7 @@
         }
 
 
-        private double Convertir(double cantidad, string unidadOrigen, string unidadDestino)
+        private double WRConvertir(double cantidad, string unidadOrigen, string unidadDestino)
         {
 
             double cantidadEnMetros = unidadOrigen switch

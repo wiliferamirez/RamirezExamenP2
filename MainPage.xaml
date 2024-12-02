@@ -79,12 +79,12 @@
                 Text="Convertir"
                 VerticalOptions="Center"
                 HorizontalOptions="Start"
-                Clicked="convertirUnidades"/>
+                Clicked="WRconvertirUnidades"/>
         <Button x:Name="WRLimpiarButton"
                 Grid.Row="2" Margin="25"
                 Text="Limpiar"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Clicked="limpiarCampos"/>
+                Clicked="WRlimpiarCampos"/>
     </Grid>
 </ContentPage>
